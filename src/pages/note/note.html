@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Notes</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let note of notes | async as note" (click)="getNote(note.createDate)">
+
+       <span class="date">{{note.date}}</span>
+       {{note.title}}
+      </button>
+  </ion-list>
+  <ion-fab bottom right>
+    <button  ion-fab color="danger" (click)="addNote()"color="danger"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>
+

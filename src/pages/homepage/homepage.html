@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Well Come </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="background" >
+<ion-slides pager>
+  <ion-slide >
+    <p color="light" class="rightt" >{{today|date:'dd/MM/yyyy HH:mm'}}</p>
+    <img class="imgg"[src]="img" />
+    <ion-card class="inputbox">
+      <ion-card-content>
+        <ion-card-title color="danger" center>&nbsp;&nbsp;
+          {{greet}}<br />  {{name}}
+          </ion-card-title>
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide class ="bgimg">
+    <p class="rightt" color="light">{{today|date:'dd/MM/yyyy HH:mm'}}</p>
+    <h3>
+      Zemen Bank is Proud of Serving you with a mix of Local
+    Knowledge & World-Class Standards!
+  </h3>
+</ion-slide>
+<ion-slide>
+  <img style="background-color: red">
+    <p class="rightt" color="light">{{today|date:'dd/MM/yyyy HH:mm'}}</p>
+    <img src="assets/imgs/cof.jpg" />
+  </ion-slide>
+
+</ion-slides>
+</ion-content>
+<ion-footer>
+  <ion-tabs color="danger">
+    <ion-tab [root]="tab2Root" tabTitle="Home Page"
+      [rootParams]="rootParamsData"
+      tabIcon="information-circle"></ion-tab>
+      <ion-tab [root]="tab1Root" tabTitle="Account Summary"
+      [rootParams]="rootParamsData"
+      tabIcon="home"></ion-tab>
+  </ion-tabs>
+</ion-footer>

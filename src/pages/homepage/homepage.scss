@@ -1,0 +1,49 @@
+page-homepage  {
+
+
+  ion-content{
+
+    background: url(../assets/imgs/z1.jpg) no-repeat center fixed;
+    background-size:cover;
+    &:before{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      background-image: liner-gradient(to bottom right, #02362C, #003199);
+      opacity:.3;
+    }
+
+}
+.imgg{
+  border-radius: 50%;
+  width:300px;
+  height:250px;
+
+}
+.inputbox{
+  margin-top: 20px;
+  border-radius: 50px;
+  box-shadow: 0 6px 12px rgba(233, 59, 59, 0.3);
+  border-color: rgb(10, 10, 10);
+  background-color: rgb(7, 7, 7);
+
+}
+.bgimg{
+
+  background-image:'assets/imgs/cof.jpg';
+}
+ion-segment-button{
+}
+.background{
+  color:white;
+  margin-top: -30px;
+}
+.rightt{
+
+  text-align: right;
+  margin-top: -5px;
+}
+}

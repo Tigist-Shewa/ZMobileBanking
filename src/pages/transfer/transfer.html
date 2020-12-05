@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Transfer</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-card class="transfer">
+  <ion-list>
+    <ion-item>
+      <ion-label>Select Your AccountClass *</ion-label>
+      <ion-select [(ngModel)]="SavingAccounts"class="ac">
+        <ion-option value="f">SCON</ion-option>
+        <ion-option value="m">CBPI</ion-option>
+        <ion-option value="m">SPRI</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+
+
+      <ion-label fixed>Transfer To*:</ion-label>
+      <ion-input type="text"placeholder="Enter Account Number" class="tt"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed class="amt">Amount *</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <button ion-button medium color="danger" (click)="showConfirm()">Submit</button>
+    </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-footer>
+    <ion-toolbar color="danger">
+      <ion-fab bottom right>
+        <button  ion-fab color="danger" (click)="homePage()"color="dark"><ion-icon name="home"></ion-icon></button>
+      </ion-fab>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

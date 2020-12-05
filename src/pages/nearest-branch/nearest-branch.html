@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Map View</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <agm-map [latitude]="9.016610499999999" [longitude]="38.7577503" [zoom]="5">
+    <agm-marker [latitude]="8" [longitude]="38"></agm-marker>
+  </agm-map>
+</ion-content>

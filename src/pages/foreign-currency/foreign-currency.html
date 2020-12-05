@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Current Foregn Currency</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list font="small">
+    <ion-item id="col">
+
+      <ion-label>Country</ion-label>
+<ion-label color="danger" position="floating">Currency</ion-label>
+<ion-label>CashBuy</ion-label>
+<ion-label>CashSell</ion-label>
+
+    </ion-item>
+<ion-item *ngFor="let curr of currencies">
+<ion-label><img [src]="curr.image" alt=""></ion-label>
+<ion-label>{{curr.currency}}</ion-label>
+<ion-label>{{curr.cashBuying}}</ion-label>
+<ion-label>{{curr.cashSelling}}</ion-label>
+
+</ion-item>
+
+
+  </ion-list>
+  <hr />
+  <ion-list font="small">
+    <ion-item id="col">
+
+      <ion-label>Country</ion-label>
+<ion-label color="danger" position="floating">Currency</ion-label>
+<ion-label>TranBuy</ion-label>
+<ion-label>TranSell</ion-label>
+    </ion-item>
+<ion-item *ngFor="let curr of currencies">
+<ion-label><img [src]="curr.image" alt=""></ion-label>
+
+<ion-label>{{curr.cashSelling}}</ion-label>
+<ion-label>{{curr.trnBuying}}</ion-label>
+<ion-label>{{curr.trnSelling}}</ion-label>
+</ion-item>
+
+
+  </ion-list>
+</ion-content>

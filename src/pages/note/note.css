@@ -1,0 +1,22 @@
+page-note ion-content {
+  background: url(../assets/imgs/bg8.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+page-note ion-content:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: liner-gradient(to bottom right, #02362C, #003199);
+  opacity: .3;
+}
+
+page-note .date {
+  font-weight: bold;
+  color: #888;
+  padding-right: 24px;
+  font-size: 0.8em;
+}

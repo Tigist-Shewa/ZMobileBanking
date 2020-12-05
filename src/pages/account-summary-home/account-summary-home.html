@@ -1,0 +1,38 @@
+<ion-header >
+
+  <ion-navbar color="danger">
+    <button ion-button menuToggle start>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Account Summary</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item-group *ngFor="let group of groupAcconts">
+      <ion-item-divider class="category" light>{{group.category}}</ion-item-divider>
+      <ion-item *ngFor="let account of group.accounts">
+        <div class="accountClass">{{account.accountClass}}
+        </div>
+        <div class="accountid" *ngIf="account.id">
+          {{account.id.substring(account.id.length - 6, account.id.length)}}
+        </div>
+        <p> {{name}}</p>
+        <div *ngIf="account.balance"
+          class="{{
+            (account.balance_amt >= 0) ? 'balance-positive' : 'balance-negative'
+          }}"
+          item-right>
+          {{
+                (account.balance_amt >= 0) ?
+                 account.balance +  "ETB" :
+                 account.balance + "-ETB".replace('-', '')
+          }}
+        </div>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+  <ion-fab bottom right >
+ <button  ion-fab color="danger" (click)="homePage()"color="dark"><ion-icon name="home"></ion-icon></button>
+</ion-fab>
+</ion-content>

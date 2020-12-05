@@ -1,44 +1,64 @@
+import { NotePage } from './../pages/note/note';
+import { ZemenProfilePage } from './../pages/zemen-profile/zemen-profile';
+import { NearestBranchPage } from './../pages/nearest-branch/nearest-branch';
+import { ForeignCurrencyPage } from './../pages/foreign-currency/foreign-currency';
+import { SwiftTransferPage } from './../pages/swift-transfer/swift-transfer';
+import { TransferPage } from './../pages/transfer/transfer';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
+import { LoginPage } from '../pages/login/login';
+import { BillsPage } from '../pages/bills/bills';
+import { NearestAtmPage } from '../pages/nearest-atm/nearest-atm';
+import { SettingPage } from '../pages/setting/setting';
+import { AccountSummaryHomePage } from '../pages/account-summary-home/account-summary-home';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage:any = LoginPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
+  activePage: any;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+    platform.ready().then(() => {
 
-    // used for an example of ngFor and navigation
+      statusBar.styleDefault();
+      setTimeout(() => {
+        splashScreen.hide();
+      }, 100);
+    });
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: 'Accounts', component: AccountSummaryHomePage, icon: 'assets/imgs/accmenu.png' },
+      { title: 'Transfer', component: TransferPage, icon: 'assets/imgs/trans.png' },
+      { title: 'Bills', component: BillsPage, icon: 'assets/imgs/billm.png' },
+      { title: 'Swift Transfer', component: SwiftTransferPage, icon: 'assets/imgs/swiftt.png' },
+      { title: 'Foreign Currency', component: ForeignCurrencyPage, icon: 'assets/imgs/curr.png' },
+      { title: 'Map View', component: NearestBranchPage, icon: 'assets/imgs/nearb.png' },
+      { title: 'Nearest ATM', component: NearestAtmPage, icon: 'assets/imgs/zemenatmm.png'},
+      { title: 'My Notes', component: NotePage, icon: 'assets/imgs/zemenb.png' },
+      { title: 'Zemen Profile', component: ZemenProfilePage, icon: 'assets/imgs/zemenb.png' },
+      { title: 'Settings', component: SettingPage, icon: 'assets/imgs/set.png' },
+      { title: 'Logout', component: LoginPage, icon: 'assets/imgs/Logout.png' }
     ];
 
-  }
-
-  initializeApp() {
-    this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
-    });
+    this.activePage = this.pages[0];
   }
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+    this.activePage = page;
+    if (page.title == 'Logout') {
+      localStorage.clear();
+      this.activePage = this.pages[0];
+    }
+  }
+
+  checkActive(page) {
+    return page == this.activePage;
   }
 }

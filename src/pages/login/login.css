@@ -1,0 +1,66 @@
+page-login .background {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/imgs/zz1.jpg") !important;
+  background-size: cover;
+}
+
+page-login .loginalert {
+  color: red !important;
+}
+
+page-login .centerr {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 25px;
+}
+
+page-login #loginview .contentbox {
+  margin-top: 60px;
+}
+
+page-login #loginview .logo {
+  height: 63px;
+  width: auto;
+  margin: auto;
+  display: block;
+}
+
+page-login #loginview .inputbox {
+  margin-top: 50px;
+  border-radius: 40px;
+  box-shadow: 0 6px 12px rgba(233, 59, 59, 0.3);
+  border-color: black;
+}
+
+page-login #loginview .float {
+  color: black;
+  font-weight: bolder;
+  font-style: oblique;
+}
+
+page-login #loginview .inputlist {
+  margin: 15px;
+  border-color: red;
+}
+
+page-login #loginview .inputlist .item {
+  border-bottom: 1px solid red;
+  font-size: large;
+}
+
+page-login #loginview .buttonlogin {
+  margin-top: 50px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+page-login #loginview .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border-radius: 20px;
+}
