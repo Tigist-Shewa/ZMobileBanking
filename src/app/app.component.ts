@@ -11,7 +11,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { BillsPage } from '../pages/bills/bills';
 import { NearestAtmPage } from '../pages/nearest-atm/nearest-atm';
-import { SettingPage } from '../pages/setting/setting';
 import { AccountSummaryHomePage } from '../pages/account-summary-home/account-summary-home';
 @Component({
   templateUrl: 'app.html'
@@ -42,7 +41,6 @@ export class MyApp {
       { title: 'Nearest ATM', component: NearestAtmPage, icon: 'assets/imgs/zemenatmm.png'},
       { title: 'My Notes', component: NotePage, icon: 'assets/imgs/zemenb.png' },
       { title: 'Zemen Profile', component: ZemenProfilePage, icon: 'assets/imgs/zemenb.png' },
-      { title: 'Settings', component: SettingPage, icon: 'assets/imgs/set.png' },
       { title: 'Logout', component: LoginPage, icon: 'assets/imgs/Logout.png' }
     ];
 

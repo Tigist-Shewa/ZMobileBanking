@@ -4,7 +4,6 @@ import { ViewNotePage } from './../pages/view-note/view-note';
 import { AddNotePage } from './../pages/add-note/add-note';
 import { NotePage } from './../pages/note/note';
 import { HomePagePage } from './../pages/homepage/homepage';
-import { SettingPage } from './../pages/setting/setting';
 import { NearestBranchPage } from './../pages/nearest-branch/nearest-branch';
 import { NearestAtmPage } from './../pages/nearest-atm/nearest-atm';
 import { ForeignCurrencyPage } from './../pages/foreign-currency/foreign-currency';
@@ -39,7 +38,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NearestBranchPage,
     NearestAtmPage,
     ZemenProfilePage,
-    SettingPage,
     HomePagePage,
     NotePage,
     AddNotePage,
@@ -70,7 +68,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     NearestBranchPage,
     NearestAtmPage,
     ZemenProfilePage,
-    SettingPage,
     HomePagePage,
     NotePage,
     ViewNotePage,
