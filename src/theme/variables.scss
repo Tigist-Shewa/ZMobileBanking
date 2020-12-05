@@ -38,7 +38,8 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  bgcolor1: #add8e6,
 );
 
 
@@ -46,7 +47,9 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$images: (
+  bgimg: url('assets/imgs/sbanking_bg1.png'),
+);
 
 
 // App Material Design Variables
